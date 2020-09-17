@@ -1,5 +1,8 @@
 version = 1
 
+exclude_patterns = [ "examples/**", "docs/**" ]
+test_patterns = [ "**/test/**"]
+
 [[analyzers]]
 name = "javascript"
 enabled = true
@@ -8,3 +11,13 @@ enabled = true
   module_system = "commonjs"
   environment = ["nodejs"]
   dialect = "typescript"
+  dependency_file_paths = [ 
+    "packages/rtm-api/package.json",
+    "packages/webhook/package.json", 
+    "packages/types/package.json", 
+    "packages/web-api/package.json",
+    "packages/oauth/package.json",
+    "packages/logger/package.json",
+    "packages/interactive-messages/package.json",
+    "packages/events-api/package.json",
+    "packages/client/package.json" ]
